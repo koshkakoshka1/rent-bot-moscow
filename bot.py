@@ -18,11 +18,13 @@ def get_ads():
 def send_ads(message):
     ads = get_ads()
     for ad in ads.get('data', []):
-        text = f"🏠 {ad.get('title')}
-📍 {ad.get('address')}
-💰 {ad.get('price')}
-\n{ad.get('description')}
-\n🔗 {ad.get('url')}"
+        text = (
+            f"🏠 {ad.get('title')}\n"
+            f"📍 {ad.get('address')}\n"
+            f"💰 {ad.get('price')}\n\n"
+            f"{ad.get('description')}\n\n"
+            f"🔗 {ad.get('url')}"
+        )
         bot.send_message(CHANNEL_ID, text)
 
-bot.polling()
+bot.infinity_polling(timeout=10, long_polling_timeout=5)
