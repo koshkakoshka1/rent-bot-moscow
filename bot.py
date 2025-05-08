@@ -2,9 +2,9 @@ import os
 import requests
 import telebot
 
-TG_TOKEN = os.getenv("TG_API_TOKEN")
-CHANNEL_ID = os.getenv("CHANNEL_ID")
-ADS_TOKEN = os.getenv("ADS_API_TOKEN")
+TG_TOKEN = os.getenv("7781988624:AAGt_4WMEKvTTeOkQH8KaVnr_pCJmTrFb8g")
+CHANNEL_ID = os.getenv("1001479655015")
+ADS_TOKEN = os.getenv("a1ef5cae14f81917c0fa8040541bdbf2")
 
 bot = telebot.TeleBot(TG_TOKEN)
 
